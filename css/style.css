@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.center {
+    max-width: 1100px;
+    padding: 0 2%;
+    margin: 0 auto; /*pra sempre ficar centralizado o container*/
+}
+
+.clear {clear: both;} /*serve para quando vai se utilizar float, após isso ele limpa a flutuação/
+        /semore após utilizar float tem que limpar a flutuação*/
+
+
+header {
+    background: #3665af;
+    padding: 8px 0;
+}
+
+.logo {
+    float: left;
+    color: white;
+}
+
+.logo h2 {
+    font-size: 29px;
+    font-weight: normal;
+}
+
+form {
+    float: right;
+}
+
+.form-login .form-element {
+    display: inline-block ;
+    margin-right: 15px;
+}
+
+.form-element p {
+    color: white;
+    font-size: 14px;
+}
+
+.form-element input[type=email], 
+.form-element input[type=password] {
+    margin-top: 4px;
+    border: 0;
+    height: 16px;
+    padding-left: 3px;
+}
+
+.form-element input[type=submit] {
+    cursor: pointer;
+    border: 0;
+    background-color: #1d5dbd;
+    border: 2px solid #215ab2;
+    color: white;
+    padding: 3px 5px;
+}
+
+.form-element input[type=submit]:hover {
+    background: #215ab2;
+    transition: 0.3s;
+}
+
+section.main {
+    background: linear-gradient(white, #d3d8e8);
+    padding: 40px 0;
+}
+
+.img-pessoas {
+    float: left;
+    width: 70%;
+}
+
+.img-pessoas img {
+     max-width: 50%;
+     margin-left: 15%;
+}
+
+.abrir-conta {
+    width: 30%;
+    float: left;
+    margin-left: -9%;
+}
+
+.abrir-conta h2 {
+    color: black;
+    font-size: 35px;
+}
+
+.abrir-conta h3 {
+    font-size: 19px;
+    color: rgb(78, 76, 76);
+    margin-top: 5px;
+}
+
+.form.criar-conta {
+    margin-top: 10px;
+}
+
+.w50 {
+    width: 50%;
+    padding: 0 5px;
+    float: left;
+}
+
+.w100 {
+    padding: 0 5px;
+    width: 100%;
+    float: left;
+}
+
+form.criar-conta input {
+    width: 100%;
+    margin-top: 8px;
+}
+
+form.criar-conta input[type=email],
+form.criar-conta input[type=text],
+form.criar-conta input[type=password] {
+    height: 30px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #cdecff;
+    border-radius: 8px;
+}
+
+form.criar-conta input[type=submit] {
+    height: 40px;
+    background: linear-gradient(#67ae55, #578843);
+    color: white;
+    cursor: pointer;
+    border: 0;
+    max-width: 200px;
+    font-size: 19px;
+    border-radius: 5px;
+}
+
+form .w100 h2 {
+    color: #1d2129;
+    font-size:15px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+form select.nascimento {
+    float: left; /*deixa um grudado do lado do outro*/
+    margin-top: 5px;
+    
+}
+
+.input-radio {
+    float: left;
+    width: 40%;
+}
+
+.input-radio h2 {
+    display: inline-block;
+}
+
+.input-radio input[type=radio]{
+    width: auto !important; /*força o css a usar a propriedade dessa linha, quebrando a hierarquia*/
+    display: inline-block;
+    font-size: 15px;
+}
+
+section.linguas {
+    padding: 30px 0;
+    background-color: white;
+}
+
+section.linguas a {
+    color: #365899;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 11px;
+}
+
+section.linguas a.selected-lingua {
+    color: #737373;
+}
+
+section.linguas .center {
+    padding-left: 5%;
+    padding-right: 1%;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        float: none;
+        width: 100%;
+        text-align: center;
+    } 
+
+    form.form-login {
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .form-login .form-element {
+        display: block; /*impede que um fique do lado do outro. assim vão para baixo*/
+        margin: 10px 0;
+    }
+    
+    .form-element p {
+        color: white;
+        font-size: 14px;
+    }
+    
+    .form-element input[type=email], 
+    .form-element input[type=password] {
+        margin-top: 4px;
+        border: 0;
+        height: 16px;
+        padding-left: 3px;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .form-element input[type=submit] {
+        width: 140px;
+    }
+
+    .img-pessoas {
+        display: none;
+    }
+
+    .abrir-conta {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .abrir-conta > h2 {
+        text-align: center;
+        margin-left: 20%;
+    }
+
+    .abrir-conta > h3 {
+        text-align: center;
+        margin-left: 20%;
+    }
+
+    .w50 {
+        width: 100%;
+        margin-left: 8%;
+    }
+
+    .w100 {
+        width: 100%;
+        margin-left: 8%;
+    }
+    
+    .w100 > .nascimento {
+      width: 10%;
+      text-align: center;
+      min-width: 55px;
+      float: none;
+    }
+
+    .input-radio {
+        width: 100%;
+    }
+
+}
